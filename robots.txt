@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ayanavadasgupta.github.io/ayanava.acads/sitemap.xml
