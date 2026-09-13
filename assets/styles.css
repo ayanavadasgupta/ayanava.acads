@@ -217,6 +217,14 @@ em { font-style: normal; font-weight: inherit; }
   font-size: 1.2rem;
 }
 .hero-affiliation { color: var(--muted); font-size: 0.95rem; }
+.hero-bio {
+  max-width: 650px;
+  margin-top: 1.15rem;
+  margin-bottom: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ink);
+}
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
