@@ -2,112 +2,254 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Curriculum Vitae of Ayanava Dasgupta.">
-    <meta name="theme-color" content="#fff">
-    <title>Curriculum Vitae | Ayanava Dasgupta</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="Curriculum Vitae of Ayanava Dasgupta — Senior Research Fellow at Indian Statistical Institute, Kolkata. Official 2-page academic CV in PDF format.">
+    <meta name="author" content="Ayanava Dasgupta">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:title" content="Curriculum Vitae (PDF) | Ayanava Dasgupta">
+    <meta property="og:description" content="Official Curriculum Vitae of Ayanava Dasgupta (Indian Statistical Institute, Kolkata) — Loading the complete 2-page academic CV PDF.">
+    <meta property="og:type" content="document">
+    <title>Curriculum Vitae (PDF) | Ayanava Dasgupta</title>
     <link rel="icon" href="assets/ad-logo.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="assets/ad-logo.svg">
-    <link rel="canonical" href="https://ayanavadasgupta.github.io/ayanava.acads/cv.html">
+    <!-- Immediate Theme Synchronization (matches browser dark/light mode instantly without flash) -->
+    <script>
+      (function() {
+        try {
+          var isManual = localStorage.getItem('ayanava-theme-manual') === 'true';
+          var saved = isManual ? (sessionStorage.getItem('ayanava-theme') || localStorage.getItem('ayanava-theme')) : null;
+          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var isDark = saved ? saved === 'dark' : prefersDark;
+          if (isDark) {
+            document.documentElement.classList.add('dark-mode');
+          } else {
+            document.documentElement.classList.remove('dark-mode');
+          }
+        } catch (e) {}
+      })();
+    </script>
     <link rel="stylesheet" href="assets/styles.css">
   </head>
-  <body class="cv-page cv-modern">
-    <header class="site-header cv-header">
-      <div class="shell nav-wrap">
-        <nav class="site-nav cv-nav" aria-label="Primary navigation">
-          <a href="index.html">Research site</a>
-          <button class="print-button" type="button" onclick="window.print()">Print / Save PDF</button>
-        </nav>
-      </div>
-    </header>
-    <button class="theme-switch" type="button" aria-pressed="false" aria-label="Switch to dark mode">
+  <body>
+    <!-- Accessibility Skip Link -->
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <!-- Theme Switch (Hanging Pull-Cord Lamp) -->
+    <button
+      id="theme-lamp"
+      class="theme-switch"
+      type="button"
+      aria-pressed="false"
+      aria-label="Switch to dark mode"
+      title="Toggle dark/light mode"
+    >
       <span class="theme-switch-cord" aria-hidden="true"></span>
       <span class="theme-switch-bulb" aria-hidden="true"></span>
       <span class="theme-switch-label">Light</span>
     </button>
 
-    <main class="cv-main shell">
-      <header class="moderncv-title">
-        <div class="moderncv-name">
-          <h1><span>Ayanava</span> Dasgupta</h1>
-          <p>Curriculam Vitae</p>
-        </div>
-        <div class="moderncv-contact">
-          <address>
-            <a href="https://www.isical.ac.in/~ecsu/?q=node/8">Electronics and Communication Sciences Unit</a><br>
-            <a href="https://www.isical.ac.in/">Indian Statistical Institute, Kolkata</a><br>
-            Kolkata 7000108, India<br>
-            <a href="mailto:ayanavadasgupta0@gmail.com">ayanavadasgupta0@gmail.com</a><br>
-            <a href="https://www.linkedin.com/in/ayanava-dasgupta-25061999/">linkedin.com/in/ayanava-dasgupta-25061999</a>
-          </address>
-          <img src="assets/ayanava-cv-portrait-retouched.png" alt="Ayanava Dasgupta">
-        </div>
-        <p class="moderncv-extra">Place of Birth: Kolkata, India</p>
-      </header>
+    <!-- Top Site Navigation Header -->
+    <header class="site-header">
+      <div class="shell nav-wrap">
+        <a class="wordmark" href="index.html" aria-label="Ayanava Dasgupta home">AD<span>.</span></a>
+        <!-- Desktop Navigation Tabs -->
+        <nav class="site-nav" aria-label="Primary Navigation">
+          <a href="index.html" class="nav-tab-btn">Home</a>
+          <a href="research.html" class="nav-tab-btn">Research</a>
+          <a href="career.html" class="nav-tab-btn">Career</a>
+          <a href="cv.html" class="nav-tab-btn active" aria-current="page">CV (PDF)</a>
+          <a
+            href="index.html#contact"
+            class="nav-tab-btn"
+          >
+            Contact
+          </a>
+        </nav>
+      </div>
+    </header>
 
-      <section class="moderncv-section">
-        <h2>Academic Qualification</h2>
-        <div class="moderncv-entries">
-          <article><time>2023-</time><div><b>PhD in Computer Science</b><br><i><a href="https://www.isical.ac.in/">Indian Statistical Institute, Kolkata</a></i><br>under the supervision of <strong>Dr. Naqueeb Ahmad Warsi</strong></div></article>
-          <article><time>2025-</time><div><b>Senior Research Fellow in Computer Science</b><br><i><a href="https://www.isical.ac.in/~ecsu/?q=node/8">Electronics and Communication Sciences Unit</a></i><br><i><a href="https://www.isical.ac.in/">Indian Statistical Institute, Kolkata</a></i></div></article>
-          <article><time>2023-2025</time><div><b>Junior Research Fellow in Computer Science</b><br><i><a href="https://www.isical.ac.in/~ecsu/?q=node/8">Electronics and Communication Sciences Unit</a></i><br><i><a href="https://www.isical.ac.in/">Indian Statistical Institute, Kolkata</a></i></div></article>
-          <article><time>2021--2023</time><div><b>M Tech</b><br>Department of Computer Science<br>Grad School<br><i><a href="https://www.isical.ac.in/">Indian Statistical Institute, Kolkata</a>, 85.3%</i></div></article>
-          <article><time>2017--2021</time><div><b>B Tech</b><br>Department of Computer Science and Engineering<br>College<br><i><a href="https://gcelt.gov.in/">Government College of Engineering and Leather Technology</a>, Kolkata, <a href="https://www.makautexam.net">Maulana Abul Kalam Azad University of Technology (MAKAUT)</a> DGPA (Degree Grade Point Average) 9.51/10</i></div></article>
-        </div>
-      </section>
+    <!-- Main Content -->
+    <main id="main-content">
+      <!-- Header Toolbar Banner -->
+      <div class="page-header-banner" style="padding-bottom: 1.25rem;">
+        <div class="shell">
+          <p class="eyebrow">Academic Curriculum Vitae</p>
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <h1 style="margin: 0; font-size: clamp(1.8rem, 3.5vw, 2.5rem);">Curriculum Vitae</h1>
+              <p style="margin: 0.35rem 0 0; color: var(--muted); font-size: 0.95rem;">
+                Official 2-Page CV Document · Ayanava Dasgupta · Indian Statistical Institute, Kolkata
+              </p>
+            </div>
 
-      <section class="moderncv-section">
-        <h2>Scholastic and Curricular Achievements</h2>
-        <div class="moderncv-items">
-          <div class="moderncv-item"><strong>2026</strong><span>Qualified UGC NET for Assistant Professorship in Computer Science and Applications with 98.91 percentile.</span></div>
-          <div class="moderncv-item"><strong>2025</strong><span>Recipient of TCS Research Fellowship (Cycle 19)</span></div>
-          <div class="moderncv-item"><strong>2023</strong><span>Secured All India Rank(AIR) 4th in Indian Statistical Institute PhD Computer Science entrance examination.</span></div>
-          <div class="moderncv-item"><strong>2021</strong><span>Secured All India Rank(AIR) 18th in Indian Statistical Institute entrance examination of M.Tech CS</span></div>
-          <div class="moderncv-item"><strong>2021</strong><span>Secured 98.8 Percentile in <strong>Graduate Aptitude Test Engineering 2021</strong></span></div>
-        </div>
-      </section>
+            <!-- CV Actions Toolbar -->
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center;">
+              <a
+                id="download-cv-pdf-btn"
+                href="assets/ayanava-dasgupta-cv.pdf"
+                download="Ayanava_Dasgupta_Curriculum_Vitae.pdf"
+                class="button button-primary"
+                style="font-size: 0.85rem; padding: 0.5rem 0.9rem; min-height: 38px; display: inline-flex; align-items: center; gap: 0.4rem;"
+                aria-label="Download CV PDF"
+              >
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="7 10 12 15 17 10"/>
+                  <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                <span>Download PDF</span>
+              </a>
 
-      <section class="moderncv-section">
-        <h2>Thesis and Reports</h2>
-        <div class="moderncv-items">
-          <div class="moderncv-item"><strong>Master's Thesis</strong><span><i><strong>A Study on Union and Intersection of Subspaces and its Application to Quantum Communication</strong> June 2023</i><br><i>Supervised by <strong>Dr. Naqueeb Ahmad Warsi.</strong></i><br>Submitted to Indian Statistical Institute, Kolkata.<br>In classical information theory, typical set operations are used to analyze various problems. In quantum information theory, constructing a POVM for typical subspace intersections/unions is challenging. This thesis explores this issue and <strong>tries to build a novel notion of the intersection of subspaces</strong>.</span></div>
-          <div class="moderncv-item"><strong>Minor Project Report</strong><span><i><strong>Expressibility and Entangling Capability in Noisy Parameterized Quantum Circuits</strong> July 2023</i><br><i>Supervised by <strong>Dr. Susmita Sur-Kolay.</strong></i><br>Submitted to Indian Statistical Institute, Kolkata.<br>A parameterized quantum circuit (PQC) is crucial for Hybrid Quantum Classical (HQC) Algorithms. Two key metrics, <strong>Expressibility</strong> and <strong>Entangling Capability</strong>, evaluate PQC effectiveness. We aim to examine these measures' behavior with noise consideration by investigating <strong>19 PQCs for 4 qubits with varying complexity</strong>. Our goal is to analyze metric trends for each circuit <strong>as we vary noise using common noise models</strong>.</span></div>
-        </div>
-      </section>
+              <a
+                id="open-cv-tab-btn"
+                href="assets/ayanava-dasgupta-cv.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button"
+                style="font-size: 0.85rem; padding: 0.5rem 0.9rem; min-height: 38px; display: inline-flex; align-items: center; gap: 0.4rem;"
+                aria-label="Open PDF directly in new browser tab"
+              >
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+                <span>Open in New Tab</span>
+              </a>
 
-      <section class="moderncv-section" id="publications">
-        <h2>Publications and Preprints</h2>
-        <div class="moderncv-items">
-          <div class="moderncv-item"><strong>April 2026</strong><span><strong>Generalization Bounds for Quantum Learning via Rényi Divergences</strong><br>with Naqueeb Ahmad Warsi and Masahito Hayashi<br>Arxiv link: <a href="https://arxiv.org/abs/2505.11025"><i>arXiv:2505.11025</i></a></span></div>
-          <div class="moderncv-item"><strong>Feb 2025</strong><span><strong>Universal tester for multiple independence testing and classical-quantum arbitrarily varying multiple access channel</strong><br>with Naqueeb Ahmad Warsi and Masahito Hayashi<br>Accepted in IEEE Transactions on Information Theory<br>DOI: <a href="https://doi.org/10.1109/TIT.2025.3538870">10.1109/TIT.2025.3538870</a><br>Arxiv link: <a href="https://arxiv.org/abs/2409.05619"><i>arXiv:2409.05619</i></a></span></div>
-          <div class="moderncv-item"><strong>Jan 2025</strong><span><strong>Intersection and union of subspaces with applications to communication over authenticated classical-quantum channels and composite hypothesis testing</strong><br>with Naqueeb Ahmad Warsi<br>Accepted in IEEE Transactions on Information Theory<br>DOI: <a href="https://doi.org/10.1109/TIT.2025.3531565">10.1109/TIT.2025.3531565</a><br>Arxiv link: <a href="https://arxiv.org/abs/2311.10524"><i>arXiv:2311.10524</i></a></span></div>
+              <button
+                type="button"
+                class="button"
+                style="font-size: 0.85rem; padding: 0.5rem 0.9rem; min-height: 38px; display: inline-flex; align-items: center; gap: 0.4rem;"
+                onclick="window.print()"
+                aria-label="Print CV"
+              >
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="6 9 6 2 18 2 18 9"/>
+                  <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+                  <rect width="12" height="8" x="6" y="14"/>
+                </svg>
+                <span>Print</span>
+              </button>
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
 
-      <section class="moderncv-section">
-        <h2>Preprint Articles</h2>
-        <div class="moderncv-items">
-          <div class="moderncv-item"><strong>Sept 2026</strong><span><strong>Haar-Bayesian Pure-State Prediction under Relative-Entropy Loss: Arbitrary-Effect Reduction and Global Optimality</strong><br>with Masahito Hayashi and Naqueeb Ahmad Warsi<br>Arxiv link: <a href="https://arxiv.org/abs/2609.10072"><i>arXiv:2609.10072</i></a></span></div>
-          <div class="moderncv-item"><strong>Sept 2026</strong><span><strong>Uniqueness and Cramér-Rao Efficiency of Quantum U-Statistics</strong><br>with Naqueeb Ahmad Warsi and Premanshu Chatterjee<br>Arxiv link: <a href="https://arxiv.org/abs/2609.08745"><i>arXiv:2609.08745</i></a></span></div>
-          <div class="moderncv-item"><strong>June 2026</strong><span><strong>Privacy Implies Stability: Information-Theoretic Generalization Bounds for Quantum Learning</strong><br>with Naqueeb Ahmad Warsi and Masahito Hayashi<br>Arxiv link: <a href="https://arxiv.org/abs/2602.01177"><i>arXiv:2602.01177</i></a></span></div>
-          <div class="moderncv-item"><strong>Nov 2025</strong><span><strong>Quantum Information Ordering and Differential Privacy</strong><br>with Naqueeb Ahmad Warsi and Masahito Hayashi<br>Arxiv link: <a href="https://arxiv.org/abs/2511.01467"><i>arXiv:2511.01467</i></a></span></div>
+      <div class="shell" style="padding-top: 1.5rem;">
+        <!-- Embedded PDF View Container -->
+        <div id="cv-pdf-container">
+          <div class="pdf-viewer-container" style="margin-top: 0;">
+            <object
+              data="assets/ayanava-dasgupta-cv.pdf#view=FitH"
+              type="application/pdf"
+              class="pdf-object-frame"
+              style="width: 100%; height: 85vh; min-height: 780px;"
+              aria-label="Ayanava Dasgupta CV PDF"
+            >
+              <iframe
+                src="assets/ayanava-dasgupta-cv.pdf#view=FitH"
+                title="Ayanava Dasgupta CV PDF"
+                class="pdf-object-frame"
+                style="width: 100%; height: 85vh; min-height: 780px; border: none;"
+              >
+                <div class="pdf-mobile-fallback">
+                  <p style="font-size: 1.05rem; margin-bottom: 1rem;">
+                    The attached Curriculum Vitae is ready to view or download:
+                  </p>
+                  <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+                    <a
+                      href="assets/ayanava-dasgupta-cv.pdf"
+                      download="Ayanava_Dasgupta_Curriculum_Vitae.pdf"
+                      class="button button-primary"
+                    >
+                      Download Attached CV (PDF)
+                    </a>
+                    <a
+                      href="assets/ayanava-dasgupta-cv.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="button"
+                    >
+                      Open PDF in New Window
+                    </a>
+                  </div>
+                </div>
+              </iframe>
+            </object>
+          </div>
+
+          <!-- Direct download banner -->
+          <!-- <div style="margin: 1.5rem 0 3rem; padding: 1.25rem 1.5rem; background: var(--tint); border-radius: 4px; border: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <strong style="font-size: 0.95rem;">Ayanava Dasgupta — Curriculum Vitae</strong>
+              <p style="margin: 0.25rem 0 0; font-size: 0.86rem; color: var(--muted);">
+                Includes complete publications, preprints, ISI Kolkata affiliations, TCS Research Fellowship, and teaching appointments.
+              </p>
+            </div>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <a
+                href="assets/ayanava-dasgupta-cv.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button"
+                style="font-size: 0.82rem; padding: 0.45rem 0.85rem; min-height: 36px;"
+              >
+                Open Full PDF ↗
+              </a>
+              <a
+                href="assets/ayanava-dasgupta-cv.pdf"
+                download="Ayanava_Dasgupta_Curriculum_Vitae.pdf"
+                class="button button-primary"
+                style="font-size: 0.82rem; padding: 0.45rem 0.85rem; min-height: 36px;"
+              >
+                Download PDF ↓
+              </a>
+            </div>
+          </div> -->
         </div>
-      </section>
-
-      <section class="moderncv-section">
-        <h2>Teaching Experience</h2>
-        <div class="moderncv-entries">
-          <article><time>July 2025 -- Nov 2025</time><div><b>Teaching Assistant</b><br>Coding Theory<br>Indian Statistical Institute, Kolkata<br>Instructor: Dr. Sumanta Ghosh</div></article>
-          <article><time>July 2026 -- Nov 2026</time><div><b>Teaching Assistant</b><br>Abstract Algebra and Number Theory<br>Indian Statistical Institute, Kolkata<br>Instructor: Dr. Sumanta Ghosh</div></article>
-        </div>
-      </section>
-
-      <section class="moderncv-section">
-        <h2>Research Interests</h2>
-        <p class="moderncv-prose">Quantum Computing, Quantum Machine Learning, Classical and Quantum Information Theory, Quantum Statistical Learning, Quantum Learning Theory.<br>One-shot quantum communication protocol, quantum network theory, quantum hypothesis testing.</p>
-      </section>
+      </div>
     </main>
-    <footer class="cv-footer shell">HTML adaptation of the supplied CV · <a href="index.html">ayanava research site</a></footer>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
+      <div class="shell footer-wrap">
+        <span>© <span id="year"></span> Ayanava Dasgupta</span>
+        <!-- <div style="display: flex; gap: 1.25rem; font-size: 0.85rem;">
+          <a href="index.html">Home</a>
+          <a href="research.html">Research</a>
+          <a href="career.html">Career</a>
+          <a href="assets/ayanava-dasgupta-cv.pdf" target="_blank">Raw PDF ↗</a>
+        </div> -->
+        <span>ISI Kolkata · Quantum Information Theory</span>
+      </div>
+    </footer>
+
+    <!-- Mobile Quick Navigation Bar (Floating Dock) -->
+    <nav class="mobile-bottom-bar" aria-label="Mobile Navigation">
+      <a href="index.html" class="mobile-tab" aria-label="Home">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <span>Home</span>
+      </a>
+      <a href="research.html" class="mobile-tab" aria-label="Research">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+        <span>Research</span>
+      </a>
+      <a href="career.html" class="mobile-tab" aria-label="Career">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        <span>Career</span>
+      </a>
+      <a href="cv.html" class="mobile-tab active" aria-label="Curriculum Vitae">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+        <span>CV (PDF)</span>
+      </a>
+      <a href="index.html#contact" class="mobile-tab" aria-label="Contact">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        <span>Contact</span>
+      </a>
+    </nav>
+
     <script src="assets/site.js"></script>
   </body>
 </html>

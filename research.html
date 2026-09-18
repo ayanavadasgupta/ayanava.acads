@@ -1,0 +1,832 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="Research fields, peer-reviewed journal papers, and preprints of Ayanava Dasgupta — Quantum Statistical Inference, Quantum Differential Privacy, Quantum Learning Theory, and Quantum Communication.">
+    <meta name="author" content="Ayanava Dasgupta">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:title" content="Research | Ayanava Dasgupta">
+    <meta property="og:description" content="Research fields, publications in IEEE Transactions on Information Theory, and preprints on quantum statistical inference, quantum differential privacy, and quantum learning theory.">
+    <meta property="og:type" content="website">
+    <title>Research | Ayanava Dasgupta</title>
+    <link rel="icon" href="assets/ad-logo.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/ad-logo.svg">
+    <!-- Immediate Theme Synchronization (matches browser dark/light mode instantly without flash) -->
+    <script>
+      (function() {
+        try {
+          var isManual = localStorage.getItem('ayanava-theme-manual') === 'true';
+          var saved = isManual ? (sessionStorage.getItem('ayanava-theme') || localStorage.getItem('ayanava-theme')) : null;
+          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var isDark = saved ? saved === 'dark' : prefersDark;
+          if (isDark) {
+            document.documentElement.classList.add('dark-mode');
+          } else {
+            document.documentElement.classList.remove('dark-mode');
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="stylesheet" href="assets/styles.css">
+  </head>
+  <body>
+    <!-- Accessibility Skip Link -->
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <!-- Hanging Vintage Lamp Theme Switch -->
+    <button
+      id="theme-lamp"
+      class="theme-switch"
+      type="button"
+      aria-pressed="false"
+      aria-label="Switch to dark mode"
+      title="Toggle dark/light mode"
+    >
+      <span class="theme-switch-cord" aria-hidden="true"></span>
+      <span class="theme-switch-bulb" aria-hidden="true"></span>
+      <span class="theme-switch-label">Light</span>
+    </button>
+
+    <!-- Top Navigation Header -->
+    <header class="site-header">
+      <div class="shell nav-wrap">
+        <a class="wordmark" href="index.html" aria-label="Ayanava Dasgupta home">AD<span>.</span></a>
+
+        <!-- Primary Navigation Tabs -->
+        <nav class="site-nav" aria-label="Primary Navigation">
+          <a href="index.html" class="nav-tab-btn">Home</a>
+          <a href="research.html" class="nav-tab-btn active" aria-current="page">Research</a>
+          <a href="career.html" class="nav-tab-btn">Career</a>
+          <a href="cv.html" class="nav-tab-btn">CV (PDF)</a>
+          <a
+            href="index.html#contact"
+            class="nav-tab-btn"
+          >
+            Contact
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+      <!-- Page Header Banner -->
+      <div class="page-header-banner">
+        <div class="shell">
+          <!-- <p class="eyebrow">Scientific Investigation</p> -->
+          <h1>Research</h1>
+          <p>
+            Theoretical research in quantum information theory, learning theory, and statistical inference.
+            Touch any field below to view the published papers and preprints related to that domain.
+          </p>
+        </div>
+      </div>
+
+      <!-- 1. Fields of Work Section (Interactive Filter Cards) -->
+      <section class="fields-section" id="research-fields">
+        <div class="shell">
+          <div class="fields-instruction">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+            </svg>
+            <span><strong>Interactive Field Filter:</strong> Touch any field below to separately view its related papers and preprints.</span>
+          </div>
+
+          <div class="research-fields-grid">
+            <!-- Field 1: Quantum Statistical Inference -->
+            <button
+              type="button"
+              class="field-card"
+              id="field-card-quantum-statistical-inference"
+              data-field-id="quantum-statistical-inference"
+              data-count="2"
+              aria-pressed="false"
+            >
+              <div class="field-card-header">
+                <span class="field-number">01</span>
+                <span class="field-badge">2 Papers</span>
+              </div>
+              <h3>Quantum Statistical Inference</h3>
+              <!-- <p>Pure-state prediction under relative-entropy loss, Cramér-Rao efficiency of quantum U-statistics, optimal state estimation, and non-asymptotic statistical rates.</p> -->
+              <div class="field-keywords">
+                <span class="field-tag">Quantum U-Statistics</span>
+                <span class="field-tag">Cramér-Rao Efficiency</span>
+                <span class="field-tag">Haar-Bayesian Prediction</span>
+              </div>
+              <div class="field-action-hint">
+                <span>Touch to show papers in this field →</span>
+              </div>
+            </button>
+
+            <!-- Field 2: Quantum Differential Privacy -->
+            <button
+              type="button"
+              class="field-card"
+              id="field-card-quantum-differential-privacy"
+              data-field-id="quantum-differential-privacy"
+              data-count="2"
+              aria-pressed="false"
+            >
+              <div class="field-card-header">
+                <span class="field-number">02</span>
+                <span class="field-badge">2 Papers</span>
+              </div>
+              <h3>Quantum Differential Privacy</h3>
+              <!-- <p>Information ordering under privacy constraints, stability-implies-generalization guarantees in quantum settings, and information-theoretic privacy bounds.</p> -->
+              <div class="field-keywords">
+                <span class="field-tag">Quantum Information Ordering</span>
+                <span class="field-tag">Privacy Implies Stability</span>
+                <span class="field-tag">Quantum Generalization</span>
+              </div>
+              <div class="field-action-hint">
+                <span>Touch to show papers in this field →</span>
+              </div>
+            </button>
+
+            <!-- Field 3: Quantum Learning Theory -->
+            <button
+              type="button"
+              class="field-card"
+              id="field-card-quantum-learning"
+              data-field-id="quantum-learning"
+              data-count="4"
+              aria-pressed="false"
+            >
+              <div class="field-card-header">
+                <span class="field-number">03</span>
+                <span class="field-badge">4 Papers</span>
+              </div>
+              <h3>Quantum Learning Theory</h3>
+              <!-- <p>Generalization bounds for quantum learners via Rényi divergences, PAC learning in operator algebras, information-theoretic stability, and sample complexities.</p> -->
+              <div class="field-keywords">
+                <span class="field-tag">Rényi Divergences</span>
+                <span class="field-tag">Generalization Bounds</span>
+                <span class="field-tag">Quantum Stability</span>
+              </div>
+              <div class="field-action-hint">
+                <span>Touch to show papers in this field →</span>
+              </div>
+            </button>
+
+            <!-- Field 4: Quantum Communication & Subspace Methods -->
+            <button
+              type="button"
+              class="field-card"
+              id="field-card-quantum-comm"
+              data-field-id="quantum-comm"
+              data-count="2"
+              aria-pressed="false"
+            >
+              <div class="field-card-header">
+                <span class="field-number">04</span>
+                <span class="field-badge">2 Papers</span>
+              </div>
+              <h3>Quantum Communication and Hypothesis Testing</h3>
+              <!-- <p>Intersection and union of subspaces for POVM construction, authenticated classical–quantum channels, and arbitrarily varying multiple access channels.</p> -->
+              <div class="field-keywords">
+                <span class="field-tag">Subspace Operations</span>
+                <span class="field-tag">Authenticated CQ Channels</span>
+                <span class="field-tag">Universal Tester</span>
+                <span class="field-tag">Multiple Independence Testing</span>
+                <span class="field-tag">Composite Testing</span>
+                <span class="field-tag">Arbitrarily Varying CQ-MAC</span>
+              </div>
+              <div class="field-action-hint">
+                <span>Touch to show papers in this field →</span>
+              </div>
+            </button>
+
+            <!-- Field 5: Quantum Hypothesis Testing -->
+            <!-- <button
+              type="button"
+              class="field-card"
+              id="field-card-quantum-hypothesis-testing"
+              data-field-id="quantum-hypothesis-testing"
+              data-count="2"
+              aria-pressed="false"
+            >
+              <div class="field-card-header">
+                <span class="field-number">05</span>
+                <span class="field-badge">2 Papers</span>
+              </div>
+              <h3>Quantum Hypothesis Testing</h3>-->
+              <!-- <p>Composite hypothesis testing in quantum channels, universal testers for multiple independence testing, and error discrimination bounds.</p> -->
+              <!--<div class="field-keywords">
+                <span class="field-tag">Universal Tester</span>
+                <span class="field-tag">Multiple Independence Testing</span>
+                <span class="field-tag">Composite Testing</span>
+              </div>
+              <div class="field-action-hint">
+                <span>Touch to show papers in this field →</span>
+              </div>
+            </button> -->
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Papers Section -->
+      <section class="section" id="publications-section">
+        <div class="shell">
+          <!-- Active Field Banner (Dynamic via site.js) -->
+          <div class="active-filter-banner" id="active-filter-status" style="display: none;">
+            <div>
+              <span style="font-size: 0.82rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">
+                Active Field Filter
+              </span>
+              <div style="font-size: 1.05rem; font-weight: 700; margin-top: 0.2rem;">
+                Showing papers related to: <em id="active-field-title"></em>
+              </div>
+            </div>
+            <button
+              type="button"
+              class="button reset-field-filter"
+              style="padding: 0.4rem 0.75rem; min-height: 36px; font-size: 0.82rem;"
+            >
+              Show All Papers (7)
+            </button>
+          </div>
+
+          <!-- Filter Tabs and Search Bar -->
+          <div class="pub-filter-bar">
+            <div class="filter-tabs" role="tablist" aria-label="Field filter tabs">
+              <button type="button" class="filter-tab active" data-field-tab="all">
+                All Fields (7)
+              </button>
+              <button type="button" class="filter-tab" data-field-tab="quantum-statistical-inference">
+                Statistical Inference (2)
+              </button>
+              <button type="button" class="filter-tab" data-field-tab="quantum-differential-privacy">
+                Differential Privacy (2)
+              </button>
+              <button type="button" class="filter-tab" data-field-tab="quantum-learning">
+                Quantum Learning (4)
+              </button>
+              <button type="button" class="filter-tab" data-field-tab="quantum-comm">
+                Quantum Comm &amp; Hypothesis Testing (2)
+              </button>
+            </div>
+
+            <div class="pub-search-box">
+              <svg class="pub-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+              <input
+                id="pub-search-input"
+                type="text"
+                placeholder="Search papers, arXiv, authors..."
+                aria-label="Search publications"
+              >
+              <button
+                id="clear-search-btn"
+                type="button"
+                style="display: none; position: absolute; right: 0.6rem; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; color: var(--muted); font-size: 1rem; padding: 0.2rem;"
+                aria-label="Clear search"
+              >
+                ✕
+              </button>
+            </div>
+          </div>
+
+          <!-- No Results State -->
+          <div id="no-results-state" style="display: none; text-align: center; padding: 3rem 1rem; background: var(--tint); border-radius: 4px; border: 1px solid var(--line); margin: 2rem 0;">
+            <p style="font-size: 1.1rem; margin: 0 0 1rem;">No papers found matching the current search criteria.</p>
+            <button type="button" class="button reset-field-filter">
+              Reset All Filters
+            </button>
+          </div>
+
+          <!-- 2A. Published Papers Separately -->
+          <div id="journal-section" style="margin-bottom: 3.5rem;">
+            <div class="pub-section-title">
+              <span>Published Papers</span>
+              <span id="journal-count" class="count">(3)</span>
+            </div>
+
+            <div class="publication-list">
+              <!-- Published Paper 1: IEEE TIT April 2026 -->
+              <article
+                class="publication"
+                id="pub-tit-2026-renyi"
+                data-type="journal"
+                data-fields="quantum-learning"
+              >
+                <div class="pub-meta">
+                  <span class="pub-badge tit">IEEE TIT</span>
+                  <span>April 2026</span>
+                  <span style="font-size: 0.75rem;">DOI: 10.1109/TIT.2026.3683678</span>
+                </div>
+
+                <div class="pub-main">
+                  <h3>Generalization Bounds for Quantum Learning via Rényi Divergences</h3>
+                  <p class="pub-authors">with Naqueeb Ahmad Warsi and Masahito Hayashi</p>
+                  <p style="margin: 0; font-size: 0.86rem; color: var(--accent-blue); font-style: italic;">
+                    IEEE Transactions on Information Theory | arXiv:2409.05619
+                  </p>
+
+                  <div class="pub-field-tags">
+                    <button type="button" class="pub-tag-btn" data-filter-field="quantum-learning">
+                      Quantum Learning
+                    </button>
+                    <button type="button" class="pub-tag-btn" data-filter-field="quantum-statistical-inference">
+                      Statistical Inference
+                    </button>
+                  </div>
+                </div>
+
+                <div class="pub-actions">
+                  <a
+                    href="https://doi.org/10.1109/TIT.2026.3683678"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="pub-link"
+                    aria-label="Read IEEE TIT publication"
+                  >
+                    <span>IEEE TIT</span>
+                    <span aria-hidden="true">↗</span>
+                  </a>
+
+                  <a
+                    href="https://arxiv.org/abs/2409.05619"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="pub-link"
+                    aria-label="Read arXiv preprint"
+                  >
+                    <span>arXiv</span>
+                    <span aria-hidden="true">↗</span>
+                  </a>
+
+                  <button
+                    type="button"
+                    class="pub-link cite-copy-btn"
+                    data-citation="Ayanava Dasgupta, Naqueeb Ahmad Warsi, Masahito Hayashi. &quot;Generalization Bounds for Quantum Learning via Rényi Divergences.&quot; IEEE Transactions on Information Theory, April 2026. DOI: 10.1109/TIT.2026.3683678. arXiv:2409.05619."
+                    aria-label="Copy citation"
+                  >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+                    </svg>
+                    <span>Cite</span>
+                  </button>
+                </div>
+              </article>
+
+              <!-- Published Paper 2: IEEE TIT Feb 2025 -->
+              <article
+                class="publication"
+                id="pub-tit-2025-tester"
+                data-type="journal"
+                data-fields="quantum-comm"
+              >
+                <div class="pub-meta">
+                  <span class="pub-badge tit">IEEE TIT</span>
+                  <span>Feb 2025</span>
+                  <span style="font-size: 0.75rem;">DOI: 10.1109/TIT.2025.3538870</span>
+                </div>
+
+                <div class="pub-main">
+                  <h3>Universal tester for multiple independence testing and classical-quantum arbitrarily varying multiple access channel</h3>
+                  <p class="pub-authors">with Naqueeb Ahmad Warsi and Masahito Hayashi</p>
+                  <p style="margin: 0; font-size: 0.86rem; color: var(--accent-blue); font-style: italic;">
+                    IEEE Transactions on Information Theory | arXiv:2409.05619
+                  </p>
+
+                  <div class="pub-field-tags">
+                    <button type="button" class="pub-tag-btn" data-filter-field="quantum-comm">
+                      Quantum Comm
+                    </button>
+                    <button type="button" class="pub-tag-btn" data-filter-field="quantum-statistical-inference">
+                      Statistical Inference
+                    </button>
+                    <!-- <button type="button" class="pub-tag-btn" data-filter-field="quantum-hypothesis-testing">
+                      Hypothesis Testing
+                    </button> -->
+                  </div>
+                </div>
+
+                <div class="pub-actions">
+                  <a
+                    href="https://doi.org/10.1109/TIT.2025.3538870"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="pub-link"
+                    aria-label="Read IEEE TIT publication"
+                  >
+                    <span>IEEE TIT</span>
+                    <span aria-hidden="true">↗</span>
+                  </a>
+
+                  <a
+                    href="https://arxiv.org/abs/2409.05619"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="pub-link"
+                    aria-label="Read arXiv preprint"
+                  >
+                    <span>arXiv</span>
+                    <span aria-hidden="true">↗</span>
+                  </a>
+
+                  <button
+                    type="button"
+                    class="pub-link cite-copy-btn"
+                    data-citation="Ayanava Dasgupta, Naqueeb Ahmad Warsi, Masahito Hayashi. &quot;Universal tester for multiple independence testing and classical-quantum arbitrarily varying multiple access channel.&quot; IEEE Transactions on Information Theory, Feb 2025. DOI: 10.1109/TIT.2025.3538870. arXiv:2409.05619."
+                    aria-label="Copy citation"
+                  >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+                    </svg>
+                    <span>Cite</span>
+                  </button>
+                </div>
+              </article>
+
+              <!-- Published Paper 3: IEEE TIT Jan 2025 -->
+              <article
+                class="publication"
+                id="pub-tit-2025-subspaces"
+                data-type="journal"
+                data-fields="quantum-comm"
+              >
+                <div class="pub-meta">
+                  <span class="pub-badge tit">IEEE TIT</span>
+                  <span>Jan 2025</span>
+                  <span style="font-size: 0.75rem;">DOI: 10.1109/TIT.2025.3531565</span>
+                </div>
+
+                <div class="pub-main">
+                  <h3>Intersection and union of subspaces with applications to communication over authenticated classical-quantum channels and composite hypothesis testing</h3>
+                  <p class="pub-authors">with Naqueeb Ahmad Warsi</p>
+                  <p style="margin: 0; font-size: 0.86rem; color: var(--accent-blue); font-style: italic;">
+                    IEEE Transactions on Information Theory | arXiv:2311.10524
+                  </p>
+
+                  <div class="pub-field-tags">
+                    <button type="button" class="pub-tag-btn" data-filter-field="quantum-comm">
+                      Quantum Comm
+                    </button>
+                    <!-- <button type="button" class="pub-tag-btn" data-filter-field="quantum-hypothesis-testing">
+                      Hypothesis Testing
+                    </button> -->
+                  </div>
+                </div>
+
+                <div class="pub-actions">
+                  <a
+                    href="https://doi.org/10.1109/TIT.2025.3531565"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="pub-link"
+                    aria-label="Read IEEE TIT publication"
+                  >
+                    <span>IEEE TIT</span>
+                    <span aria-hidden="true">↗</span>
+                  </a>
+
+                  <a
+                    href="https://arxiv.org/abs/2311.10524"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="pub-link"
+                    aria-label="Read arXiv preprint"
+                  >
+                    <span>arXiv</span>
+                    <span aria-hidden="true">↗</span>
+                  </a>
+
+                  <button
+                    type="button"
+                    class="pub-link cite-copy-btn"
+                    data-citation="Ayanava Dasgupta, Naqueeb Ahmad Warsi. &quot;Intersection and union of subspaces with applications to communication over authenticated classical-quantum channels and composite hypothesis testing.&quot; IEEE Transactions on Information Theory, Jan 2025. DOI: 10.1109/TIT.2025.3531565. arXiv:2311.10524."
+                    aria-label="Copy citation"
+                  >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+                    </svg>
+                    <span>Cite</span>
+                  </button>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- 2B. Preprints and Working Papers Separately -->
+          <div id="preprint-section">
+            <div class="pub-section-title">
+              <span>Preprints and Working Papers</span>
+              <span id="preprint-count" class="count">(4)</span>
+            </div>
+
+            <div class="publication-list">
+              <!-- Preprint 1: Sep 2026 Haar-Bayesian -->
+              <article
+                class="publication"
+                id="pub-arxiv-2609-10072"
+                data-type="preprint"
+                data-fields="quantum-statistical-inference quantum-learning"
+              >
+                <div class="pub-meta">
+                  <span class="pub-badge">Preprint</span>
+                  <span>Sep 2026</span>
+                  <span style="font-size: 0.75rem;">arXiv:2609.10072</span>
+                </div>
+
+                <div class="pub-main">
+                  <h3>Haar-Bayesian Pure-State Prediction under Relative-Entropy Loss: Arbitrary-Effect Reduction and Global Optimality</h3>
+                  <p class="pub-authors">with Masahito Hayashi and Naqueeb Ahmad Warsi</p>
+                  <p style="margin: 0; font-size: 0.85rem; color: var(--muted); font-style: italic;">
+                    Preprint / arXiv:2609.10072
+                  </p>
+
+                  <div class="pub-field-tags">
+                    <button type="button" class="pub-tag-btn" data-filter-field="quantum-statistical-inference">
+                      Statistical Inference
+                    </button>
+                    <button type="button" class="pub-tag-btn" data-filter-field="quantum-learning">
+                      Quantum Learning
+                    </button>
+                  </div>
+                </div>
+
+                <div class="pub-actions">
+                  <a
+                    href="https://arxiv.org/abs/2609.10072"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="pub-link"
+                    aria-label="Read arXiv preprint"
+                  >
+                    <span>arXiv</span>
+                    <span aria-hidden="true">↗</span>
+                  </a>
+
+                  <button
+                    type="button"
+                    class="pub-link cite-copy-btn"
+                    data-citation="Masahito Hayashi, Naqueeb Ahmad Warsi, Ayanava Dasgupta. &quot;Haar-Bayesian Pure-State Prediction under Relative-Entropy Loss: Arbitrary-Effect Reduction and Global Optimality.&quot; arXiv preprint arXiv:2609.10072, Sep 2026."
+                    aria-label="Copy citation"
+                  >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+                    </svg>
+                    <span>Cite</span>
+                  </button>
+                </div>
+              </article>
+
+              <!-- Preprint 2: Sep 2026 U-Statistics -->
+              <article
+                class="publication"
+                id="pub-arxiv-2609-08745"
+                data-type="preprint"
+                data-fields="quantum-statistical-inference quantum-learning"
+              >
+                <div class="pub-meta">
+                  <span class="pub-badge">Preprint</span>
+                  <span>Sep 2026</span>
+                  <span style="font-size: 0.75rem;">arXiv:2609.08745</span>
+                </div>
+
+                <div class="pub-main">
+                  <h3>Uniqueness and Cramér-Rao Efficiency of Quantum U-Statistics</h3>
+                  <p class="pub-authors">with Naqueeb Ahmad Warsi and Premanshu Chatterjee</p>
+                  <p style="margin: 0; font-size: 0.85rem; color: var(--muted); font-style: italic;">
+                    Preprint / arXiv:2609.08745
+                  </p>
+
+                  <div class="pub-field-tags">
+                    <button type="button" class="pub-tag-btn" data-filter-field="quantum-statistical-inference">
+                      Statistical Inference
+                    </button>
+                    <button type="button" class="pub-tag-btn" data-filter-field="quantum-learning">
+                      Quantum Learning
+                    </button>
+                  </div>
+                </div>
+
+                <div class="pub-actions">
+                  <a
+                    href="https://arxiv.org/abs/2609.08745"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="pub-link"
+                    aria-label="Read arXiv preprint"
+                  >
+                    <span>arXiv</span>
+                    <span aria-hidden="true">↗</span>
+                  </a>
+
+                  <button
+                    type="button"
+                    class="pub-link cite-copy-btn"
+                    data-citation="Naqueeb Ahmad Warsi, Premanshu Chatterjee, Ayanava Dasgupta. &quot;Uniqueness and Cramér-Rao Efficiency of Quantum U-Statistics.&quot; arXiv preprint arXiv:2609.08745, Sep 2026."
+                    aria-label="Copy citation"
+                  >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+                    </svg>
+                    <span>Cite</span>
+                  </button>
+                </div>
+              </article>
+
+              <!-- Preprint 3: June 2026 Privacy Implies Stability -->
+              <article
+                class="publication"
+                id="pub-arxiv-2602-01177"
+                data-type="preprint"
+                data-fields="quantum-differential-privacy quantum-learning"
+              >
+                <div class="pub-meta">
+                  <span class="pub-badge" style="border-color: #0645ad;">Communicated</span>
+                  <span>June 2026</span>
+                  <span style="font-size: 0.75rem;">arXiv:2602.01177</span>
+                </div>
+
+                <div class="pub-main">
+                  <h3>Privacy Implies Stability: Information-Theoretic Generalization Bounds for Quantum Learning</h3>
+                  <p class="pub-authors">with Naqueeb Ahmad Warsi and Masahito Hayashi</p>
+                  <p style="margin: 0; font-size: 0.85rem; color: var(--accent-blue); font-style: italic;">
+                    Communicated at Quantum | arXiv:2602.01177
+                  </p>
+
+                  <div class="pub-field-tags">
+                    <button type="button" class="pub-tag-btn" data-filter-field="quantum-differential-privacy">
+                      Differential Privacy
+                    </button>
+                    <button type="button" class="pub-tag-btn" data-filter-field="quantum-learning">
+                      Quantum Learning
+                    </button>
+                    <button type="button" class="pub-tag-btn" data-filter-field="quantum-statistical-inference">
+                      Statistical Inference
+                    </button>
+                  </div>
+                </div>
+
+                <div class="pub-actions">
+                  <a
+                    href="https://arxiv.org/abs/2602.01177"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="pub-link"
+                    aria-label="Read arXiv preprint"
+                  >
+                    <span>arXiv</span>
+                    <span aria-hidden="true">↗</span>
+                  </a>
+
+                  <button
+                    type="button"
+                    class="pub-link cite-copy-btn"
+                    data-citation="Naqueeb Ahmad Warsi, Masahito Hayashi, Ayanava Dasgupta. &quot;Privacy Implies Stability: Information-Theoretic Generalization Bounds for Quantum Learning.&quot; Communicated at Quantum, arXiv:2602.01177, June 2026."
+                    aria-label="Copy citation"
+                  >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+                    </svg>
+                    <span>Cite</span>
+                  </button>
+                </div>
+              </article>
+
+              <!-- Preprint 4: Nov 2025 Quantum Information Ordering and Differential Privacy -->
+              <article
+                class="publication"
+                id="pub-arxiv-2511-01467"
+                data-type="preprint"
+                data-fields="quantum-differential-privacy"
+              >
+                <div class="pub-meta">
+                  <span class="pub-badge" style="border-color: #0645ad;">Communicated</span>
+                  <span>Nov 2025</span>
+                  <span style="font-size: 0.75rem;">arXiv:2511.01467</span>
+                </div>
+
+                <div class="pub-main">
+                  <h3>Quantum Information Ordering and Differential Privacy</h3>
+                  <p class="pub-authors">with Naqueeb Ahmad Warsi and Masahito Hayashi</p>
+                  <p style="margin: 0; font-size: 0.85rem; color: var(--accent-blue); font-style: italic;">
+                    Communicated at IEEE Transactions on Information Theory | arXiv:2511.01467
+                  </p>
+
+                  <div class="pub-field-tags">
+                    <button type="button" class="pub-tag-btn" data-filter-field="quantum-differential-privacy">
+                      Differential Privacy
+                    </button>
+                  </div>
+                </div>
+
+                <div class="pub-actions">
+                  <a
+                    href="https://arxiv.org/abs/2511.01467"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="pub-link"
+                    aria-label="Read arXiv preprint"
+                  >
+                    <span>arXiv</span>
+                    <span aria-hidden="true">↗</span>
+                  </a>
+
+                  <button
+                    type="button"
+                    class="pub-link cite-copy-btn"
+                    data-citation="Naqueeb Ahmad Warsi, Masahito Hayashi, Ayanava Dasgupta. &quot;Quantum Information Ordering and Differential Privacy.&quot; Communicated at IEEE Transactions on Information Theory, arXiv:2511.01467, Nov 2025."
+                    aria-label="Copy citation"
+                  >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+                    </svg>
+                    <span>Cite</span>
+                  </button>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Profiles and Collaboration Banner -->
+      <section class="section section-tint" style="border-top: 1px solid var(--line);">
+        <div class="shell split-heading">
+          <div>
+            <!-- <p class="eyebrow">Academic Profiles</p> -->
+            <h2 style="font-size: 1.4rem;">Scientific Profiles</h2>
+          </div>
+          <div>
+            <p style="color: var(--muted); margin: 0 0 1.25rem;">
+              Full citation metrics, author profiles, and preprints are indexed on official academic databases:
+            </p>
+            <div class="profile-links" aria-label="Research profiles">
+              <a href="https://scholar.google.com/citations?hl=en&user=FrvI78gAAAAJ" target="_blank" rel="noreferrer" class="nav-tab-btn">
+                <span>Google Scholar</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+              <a href="https://arxiv.org/search/quant-ph?searchtype=author&query=Dasgupta%2C+A" target="_blank" rel="noreferrer" class="nav-tab-btn">
+                <span>arXiv</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+              <a href="https://dblp.org/pid/361/1816.html" target="_blank" rel="noreferrer" class="nav-tab-btn">
+                <span>DBLP</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+              <a href="https://www.semanticscholar.org/author/Ayanava-Dasgupta/2267243787" target="_blank" rel="noreferrer" class="nav-tab-btn">
+                <span>Semantic Scholar</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
+      <div class="shell footer-wrap">
+        <span>© <span id="year"></span> Ayanava Dasgupta</span>
+        <!-- <div style="display: flex; gap: 1.25rem; font-size: 0.85rem;">
+          <a href="index.html">Home</a>
+          <a href="research.html">Research</a>
+          <a href="career.html">Career</a>
+          <a href="cv.html">CV (PDF)</a>
+        </div> -->
+        <span>Indian Statistical Institute, Kolkata</span>
+      </div>
+    </footer>
+
+    <!-- Mobile Quick Navigation Bar (Floating Dock) -->
+    <nav class="mobile-bottom-bar" aria-label="Mobile Navigation">
+      <a href="index.html" class="mobile-tab" aria-label="Home">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <span>Home</span>
+      </a>
+      <a href="research.html" class="mobile-tab active" aria-label="Research">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+        <span>Research</span>
+      </a>
+      <a href="career.html" class="mobile-tab" aria-label="Career">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        <span>Career</span>
+      </a>
+      <a href="cv.html" class="mobile-tab" aria-label="Curriculum Vitae">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+        <span>CV (PDF)</span>
+      </a>
+      <a href="index.html#contact" class="mobile-tab" aria-label="Contact">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        <span>Contact</span>
+      </a>
+    </nav>
+
+    <script src="assets/site.js"></script>
+  </body>
+</html>

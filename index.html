@@ -2,15 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Ayanava Dasgupta — PhD researcher in quantum information theory, quantum learning, and quantum communication.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="Ayanava Dasgupta — Senior Research Fellow and PhD researcher in Quantum Information Theory, Quantum Statistical Inference, and Quantum Learning Theory at Indian Statistical Institute, Kolkata.">
+    <meta name="author" content="Ayanava Dasgupta">
     <meta name="robots" content="index, follow">
     <meta name="google-site-verification" content="yD_eZeFmQDX2Q3Hr1m5B0EIJqTNA8AumNdC5ERusO9Y">
     <meta name="theme-color" content="#ffffff">
+    <meta property="og:title" content="Ayanava Dasgupta | Quantum Information Researcher">
+    <meta property="og:description" content="Homepage of Ayanava Dasgupta — Senior Research Fellow at Indian Statistical Institute, Kolkata. Research in quantum statistical inference, differential privacy, and quantum communication.">
+    <meta property="og:type" content="website">
     <title>Ayanava Dasgupta | Quantum Information Researcher</title>
     <link rel="icon" href="assets/ad-logo.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="assets/ad-logo.svg">
-    <link rel="canonical" href="https://ayanavadasgupta.github.io/ayanava.acads/">
+    <!-- Immediate Theme Synchronization (matches browser dark/light mode instantly without flash) -->
+    <script>
+      (function() {
+        try {
+          var isManual = localStorage.getItem('ayanava-theme-manual') === 'true';
+          var saved = isManual ? (sessionStorage.getItem('ayanava-theme') || localStorage.getItem('ayanava-theme')) : null;
+          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var isDark = saved ? saved === 'dark' : prefersDark;
+          if (isDark) {
+            document.documentElement.classList.add('dark-mode');
+          } else {
+            document.documentElement.classList.remove('dark-mode');
+          }
+        } catch (e) {}
+      })();
+    </script>
     <link rel="stylesheet" href="assets/styles.css">
     <script type="application/ld+json">
       {
@@ -19,246 +38,350 @@
         "mainEntity": {
           "@type": "Person",
           "name": "Ayanava Dasgupta",
-          "jobTitle": "PhD Researcher in Computer Science",
-          "url": "https://ayanavadasgupta.github.io/ayanava.acads/",
-          "image": "https://ayanavadasgupta.github.io/ayanava.acads/assets/ad-logo.svg",
+          "jobTitle": "Senior Research Fellow in Computer Science",
+          "email": "mailto:ayanavadasgupta0@gmail.com",
           "affiliation": {
             "@type": "Organization",
-            "name": "Indian Statistical Institute, Kolkata"
+            "name": "Indian Statistical Institute, Kolkata",
+            "department": "Electronics and Communication Sciences Unit"
           },
           "knowsAbout": [
+            "Quantum Statistical Inference",
+            "Quantum Differential Privacy",
+            "Quantum Learning Theory",
             "Quantum Information Theory",
-            "Quantum Machine Learning",
-            "Quantum Communication",
-            "Quantum Learning Theory"
+            "Quantum Communication"
           ],
           "sameAs": [
+            "https://scholar.google.com/citations?hl=en&user=FrvI78gAAAAJ",
+            "https://arxiv.org/search/quant-ph?searchtype=author&query=Dasgupta%2C+A",
             "https://www.linkedin.com/in/ayanava-dasgupta-25061999/",
-            "https://dblp.org/pid/361/1816"
+            "https://dblp.org/pid/361/1816.html",
+            "https://www.semanticscholar.org/author/Ayanava-Dasgupta/2267243787"
           ]
         }
       }
     </script>
   </head>
   <body>
+    <!-- Accessibility Skip Link -->
     <a class="skip-link" href="#main-content">Skip to content</a>
-    <header class="site-header">
-      <div class="shell nav-wrap">
-        <a class="wordmark" href="#top" aria-label="Ayanava Dasgupta home">AD<span>.</span></a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-          <span class="sr-only">Toggle navigation</span>
-          <span></span><span></span>
-        </button>
-        <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
-          <a href="#research">Research</a>
-          <a href="#publications">Publications</a>
-          <a href="#background">Background</a>
-          <a href="#teaching">Teaching</a>
-          <a href="#contact">Contact</a>
-          <a class="nav-cv" href="cv.html">CV <span aria-hidden="true">↗</span></a>
-        </nav>
-      </div>
-    </header>
-    <button class="theme-switch" type="button" aria-pressed="false" aria-label="Switch to dark mode">
+
+    <!-- Theme Switch (Pull Cord Lamp) -->
+    <button
+      id="theme-lamp"
+      class="theme-switch"
+      type="button"
+      aria-pressed="false"
+      aria-label="Switch to dark mode"
+      title="Toggle dark/light mode"
+    >
       <span class="theme-switch-cord" aria-hidden="true"></span>
       <span class="theme-switch-bulb" aria-hidden="true"></span>
       <span class="theme-switch-label">Light</span>
     </button>
 
+    <!-- Top Navigation Header -->
+    <header class="site-header">
+      <div class="shell nav-wrap">
+        <a class="wordmark" href="#top" aria-label="Ayanava Dasgupta home">AD<span>.</span></a>
+        <!-- Desktop Navigation Tabs (Multi-page) -->
+        <nav class="site-nav" aria-label="Primary Navigation">
+          <a href="index.html" class="nav-tab-btn active" aria-current="page">Home</a>
+          <a href="research.html" class="nav-tab-btn">Research</a>
+          <a href="career.html" class="nav-tab-btn">Career</a>
+          <a href="cv.html" class="nav-tab-btn">CV (PDF)</a>
+          <a
+            href="#contact"
+            class="nav-tab-btn"
+          >
+            Contact
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
     <main id="main-content">
+      <!-- Hero Section -->
       <section id="top" class="hero section-dark">
         <div class="hero-grid shell">
           <div class="hero-copy reveal">
-            <p class="eyebrow light">Quantum information · quantum learning · quantum communication</p>
+            <p class="eyebrow light">Quantum Information · Quantum Learning Theory · Quantum Statistical Inference</p>
             <h1>Ayanava<br><em>Dasgupta</em></h1>
-            <p class="hero-lede">PhD researcher studying information, learning, and communication in quantum settings.</p>
-            <p class="hero-affiliation">Senior Research Fellow<br>Electronics and Communication Sciences Unit<br>Indian Statistical Institute, Kolkata</p>
-            <p class="hero-bio">Ayanava Dasgupta is a Senior Research Fellow and doctoral researcher in Computer Science at the Indian Statistical Institute (ISI), Kolkata, supervised by Dr. Naqueeb Ahmad Warsi. He holds an M.Tech in Computer Science from ISI Kolkata and a B.Tech in Computer Science &amp; Engineering from GCELT, Kolkata. A recipient of the TCS Research Fellowship, his research investigates quantum information theory, quantum learning theory, one-shot communication protocols, and statistical generalization bounds.</p>
-            <div class="hero-actions">
-              <a class="button button-light" href="#publications">Explore my research <span aria-hidden="true">↓</span></a>
-            </div>
+            <p class="hero-lede">
+              PhD researcher studying information theory, learning, and communication in quantum settings.
+            </p>
+            <p class="hero-affiliation">
+              Senior Research Fellow<br>
+              Electronics and Communication Sciences Unit (ECSU)<br>
+              Indian Statistical Institute, Kolkata
+            </p>
+            <p class="hero-bio">
+              Ayanava Dasgupta is a Senior Research Fellow and doctoral candidate in Computer Science at the Indian Statistical Institute (ISI), Kolkata, supervised by <strong>Dr. Naqueeb Ahmad Warsi</strong>. He holds an M.Tech in Computer Science from ISI Kolkata and a B.Tech from Government College of Engineering and Leather Technology (GCELT), Kolkata. A recipient of the prestigious <strong>TCS Research Fellowship (Cycle 19)</strong>, his research investigates <em>quantum statistical inference</em>, <em>quantum differential privacy</em>, <em>quantum learning theory</em>, and <em>classical–quantum communication</em>.
+            </p>
+            <!-- <div class="hero-actions" style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.5rem;">
+              <a class="button button-light" href="research.html">
+                Explore Research &amp; Papers <span aria-hidden="true">→</span>
+              </a>
+              <a class="button button-ghost" href="cv.html">
+                View CV (PDF) <span aria-hidden="true">↗</span>
+              </a>
+              <a class="button button-ghost" href="#contact">
+                Get in Touch <span aria-hidden="true">↓</span>
+              </a>
+            </div> -->
           </div>
           <figure class="portrait-frame reveal">
-            <img src="assets/ayanava-dasgupta.png" alt="Ayanava Dasgupta">
-            <figcaption>PhD researcher · Indian Statistical Institute</figcaption>
+            <img src="assets/ayanava-dasgupta.png" alt="Ayanava Dasgupta — Indian Statistical Institute">
+            <figcaption>Ayanava Dasgupta · Indian Statistical Institute, Kolkata</figcaption>
           </figure>
         </div>
       </section>
 
-      <section id="research" class="section section-intro">
+      <!-- Section Navigation Overview (Distinct Pages Hub) -->
+      <section class="section">
+        <div class="shell">
+          <div class="split-heading" style="margin-bottom: 2rem;">
+            <div>
+              <p class="eyebrow">Overview</p>
+              <h2>Academic Portals</h2>
+            </div>
+            <div class="intro-copy">
+              <p>
+                Browse each dedicated section of this academic website for full research papers, doctoral milestones, and curriculum vitae:
+              </p>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+            <!-- Portal Card 1: Research -->
+            <a
+              href="research.html"
+              style="text-decoration: none; color: inherit; display: flex; flex-direction: column; padding: 1.75rem; border: 1px solid var(--line); border-radius: 4px; background: var(--paper); transition: all 180ms ease;"
+              class="portal-card"
+            >
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                <span style="font-size: 0.8rem; font-weight: 800; color: var(--muted);">01 / PORTAL</span>
+                <span style="font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.5rem; background: var(--tag-bg); border-radius: 999px;">7 Papers</span>
+              </div>
+              <h3 style="margin: 0 0 0.5rem; font-size: 1.3rem;">Research &amp; Publications</h3>
+              <p style="margin: 0 0 1rem; color: var(--muted); font-size: 0.94rem; line-height: 1.55; flex-grow: 1;">
+                Interactive exploration of core research fields including <strong>Quantum Statistical Inference</strong>, <strong>Quantum Differential Privacy</strong>, and <strong>Quantum Learning Theory</strong>, with published IEEE TIT papers and preprints.
+              </p>
+              <span style="color: var(--link); font-weight: 600; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 0.35rem;">
+                Open Research Page <span aria-hidden="true">→</span>
+              </span>
+            </a>
+
+            <!-- Portal Card 2: Career -->
+            <a
+              href="career.html"
+              style="text-decoration: none; color: inherit; display: flex; flex-direction: column; padding: 1.75rem; border: 1px solid var(--line); border-radius: 4px; background: var(--paper); transition: all 180ms ease;"
+              class="portal-card"
+            >
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                <span style="font-size: 0.8rem; font-weight: 800; color: var(--muted);">02 / PORTAL</span>
+                <span style="font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.5rem; background: var(--tag-bg); border-radius: 999px;">Background</span>
+              </div>
+              <h3 style="margin: 0 0 0.5rem; font-size: 1.3rem;">Career &amp; Background</h3>
+              <p style="margin: 0 0 1rem; color: var(--muted); font-size: 0.94rem; line-height: 1.55; flex-grow: 1;">
+                Complete academic timeline, doctoral qualifications, TCS Research Fellowship, GATE/UGC-NET achievements, thesis reports, teaching assistantships, and references.
+              </p>
+              <span style="color: var(--link); font-weight: 600; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 0.35rem;">
+                Open Career &amp; Background <span aria-hidden="true">→</span>
+              </span>
+            </a>
+
+            <!-- Portal Card 3: CV PDF -->
+            <a
+              href="cv.html"
+              style="text-decoration: none; color: inherit; display: flex; flex-direction: column; padding: 1.75rem; border: 1px solid var(--line); border-radius: 4px; background: var(--paper); transition: all 180ms ease;"
+              class="portal-card"
+            >
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                <span style="font-size: 0.8rem; font-weight: 800; color: var(--muted);">03 / PORTAL</span>
+                <span style="font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.5rem; background: var(--tag-bg); border-radius: 999px;">PDF Document</span>
+              </div>
+              <h3 style="margin: 0 0 0.5rem; font-size: 1.3rem;">Curriculum Vitae (PDF)</h3>
+              <p style="margin: 0 0 1rem; color: var(--muted); font-size: 0.94rem; line-height: 1.55; flex-grow: 1;">
+                Loads the official 2-page academic CV PDF directly with interactive in-browser viewer, high-resolution rendering, and direct download options.
+              </p>
+              <span style="color: var(--link); font-weight: 600; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 0.35rem;">
+                Load Attached CV PDF <span aria-hidden="true">↗</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Research Domains Brief Section -->
+      <section class="section section-tint" style="border-top: 1px solid var(--line);">
         <div class="shell split-heading">
-          <p class="eyebrow">01 / Research</p>
-          <div class="intro-copy reveal">
-            <p>I develop information-theoretic tools for quantum communication and quantum learning. My work spans one-shot protocols, subspace methods, hypothesis testing, and the relationship between privacy, stability, and generalization.</p>
-          </div>
-        </div>
-
-        <div class="shell research-grid">
-          <article class="research-card reveal">
-            <p class="card-number">01</p>
-            <h3>Quantum learning theory</h3>
-            <p>Generalization guarantees for quantum learners through Rényi divergences, information-theoretic stability, and differential privacy.</p>
-          </article>
-          <article class="research-card reveal">
-            <p class="card-number">02</p>
-            <h3>Quantum information theory</h3>
-            <p>Subspace intersections and unions, composite hypothesis testing, and one-shot tools for quantum information processing.</p>
-          </article>
-          <article class="research-card reveal">
-            <p class="card-number">03</p>
-            <h3>Quantum communication</h3>
-            <p>Authenticated classical–quantum channels, arbitrarily varying multiple-access channels, and quantum network theory.</p>
-          </article>
-        </div>
-        <div class="shell research-profiles reveal">
-          <p class="eyebrow">Research profiles</p>
-          <div class="profile-links" aria-label="Research profiles">
-            <a href="https://scholar.google.com/citations?hl=en&user=FrvI78gAAAAJ" target="_blank" rel="noreferrer"><span>Google Scholar</span><span aria-hidden="true">↗</span></a>
-            <a href="https://dblp.org/pid/361/1816.html" target="_blank" rel="noreferrer"><span>DBLP</span><span aria-hidden="true">↗</span></a>
-            <a href="https://www.semanticscholar.org/author/Ayanava-Dasgupta/2267243787" target="_blank" rel="noreferrer"><span>Semantic Scholar</span><span aria-hidden="true">↗</span></a>
-          </div>
-        </div>
-      </section>
-
-      <section id="publications" class="section section-tint">
-        <div class="shell split-heading publication-heading">
-          <p class="eyebrow">02 / Publications and Preprints</p>
           <div>
-            <p class="section-note">For the complete list and linked records, see my <a href="cv.html#publications">full CV</a>.</p>
-          </div>
-        </div>
-
-        <div class="shell publication-list">
-          <article class="publication reveal">
-            <div class="pub-meta"><span>2026</span><span>Preprint</span></div>
-            <div class="pub-main">
-              <h3>Haar-Bayesian Pure-State Prediction under Relative-Entropy Loss: Arbitrary-Effect Reduction and Global Optimality</h3>
-              <p>with Masahito Hayashi and Naqueeb Ahmad Warsi</p>
-            </div>
-            <a class="pub-link" href="https://arxiv.org/abs/2609.10072" target="_blank" rel="noreferrer" aria-label="Read Haar-Bayesian Pure-State Prediction on arXiv">Read <span aria-hidden="true">↗</span></a>
-          </article>
-          <article class="publication reveal">
-            <div class="pub-meta"><span>2026</span><span>Preprint</span></div>
-            <div class="pub-main">
-              <h3>Uniqueness and Cramér-Rao Efficiency of Quantum U-Statistics</h3>
-              <p>with Naqueeb Ahmad Warsi and Premanshu Chatterjee</p>
-            </div>
-            <a class="pub-link" href="https://arxiv.org/abs/2609.08745" target="_blank" rel="noreferrer" aria-label="Read Uniqueness and Cramér-Rao Efficiency of Quantum U-Statistics on arXiv">Read <span aria-hidden="true">↗</span></a>
-          </article>
-          <article class="publication reveal">
-            <div class="pub-meta"><span>2026</span><span>Preprint</span></div>
-            <div class="pub-main">
-              <h3>Privacy Implies Stability: Information-Theoretic Generalization Bounds for Quantum Learning</h3>
-              <p>with Naqueeb Ahmad Warsi and Masahito Hayashi</p>
-            </div>
-            <a class="pub-link" href="https://arxiv.org/abs/2602.01177" target="_blank" rel="noreferrer" aria-label="Read Privacy Implies Stability on arXiv">Read <span aria-hidden="true">↗</span></a>
-          </article>
-          <article class="publication reveal">
-            <div class="pub-meta"><span>2026</span><span>Preprint</span></div>
-            <div class="pub-main">
-              <h3>Quantum Information Ordering and Differential Privacy</h3>
-              <p>with Naqueeb Ahmad Warsi and Masahito Hayashi</p>
-            </div>
-            <a class="pub-link" href="https://arxiv.org/abs/2511.01467" target="_blank" rel="noreferrer" aria-label="Read Quantum Information Ordering and Differential Privacy on arXiv">Read <span aria-hidden="true">↗</span></a>
-          </article>
-          <article class="publication reveal">
-            <div class="pub-meta"><span>2026</span><span>IEEE TIT</span></div>
-            <div class="pub-main">
-              <h3>Generalization Bounds for Quantum Learning via Rényi Divergences</h3>
-              <p>with Naqueeb Ahmad Warsi and Masahito Hayashi</p>
-            </div>
-            <a class="pub-link" href="https://doi.org/10.1109/TIT.2026.3683678" target="_blank" rel="noreferrer" aria-label="Read Generalization Bounds for Quantum Learning on arXiv">Read <span aria-hidden="true">↗</span></a>
-          </article>
-          <article class="publication reveal">
-            <div class="pub-meta"><span>2025</span><span>IEEE TIT</span></div>
-            <div class="pub-main">
-              <h3>Universal Tester for Multiple Independence Testing and Classical–Quantum Arbitrarily Varying Multiple Access Channel</h3>
-              <p>with Naqueeb Ahmad Warsi and Masahito Hayashi</p>
-            </div>
-            <a class="pub-link" href="https://doi.org/10.1109/TIT.2025.3538870" target="_blank" rel="noreferrer" aria-label="Read Universal Tester paper">Read <span aria-hidden="true">↗</span></a>
-          </article>
-          <article class="publication reveal">
-            <div class="pub-meta"><span>2025</span><span>IEEE TIT</span></div>
-            <div class="pub-main">
-              <h3>Intersection and Union of Subspaces with Applications to Communication over Authenticated Classical–Quantum Channels and Composite Hypothesis Testing</h3>
-              <p>with Naqueeb Ahmad Warsi</p>
-            </div>
-            <a class="pub-link" href="https://doi.org/10.1109/TIT.2025.3531565" target="_blank" rel="noreferrer" aria-label="Read Intersection and Union of Subspaces paper">Read <span aria-hidden="true">↗</span></a>
-          </article>
-        </div>
-      </section>
-
-      <section id="background" class="section">
-        <div class="shell split-heading">
-          <p class="eyebrow">03 / Academic background</p>
-        </div>
-        <div class="shell background-grid">
-          <div class="timeline reveal">
-            <div class="timeline-item">
-              <span class="timeline-year">2023–present</span>
-              <div><h3>PhD in Computer Science</h3><p>Indian Statistical Institute, Kolkata<br>Advisor: Dr. Naqueeb Ahmad Warsi</p></div>
-            </div>
-            <div class="timeline-item">
-              <span class="timeline-year">2025–present</span>
-              <div><h3>Senior Research Fellow</h3><p>Electronics and Communication Sciences Unit, Indian Statistical Institute, Kolkata</p></div>
-            </div>
-            <div class="timeline-item">
-              <span class="timeline-year">2021–2023</span>
-              <div><h3>M.Tech in Computer Science</h3><p>Indian Statistical Institute, Kolkata · 85.3%</p></div>
-            </div>
-            <div class="timeline-item">
-              <span class="timeline-year">2017–2021</span>
-              <div><h3>B.Tech in Computer Science &amp; Engineering</h3><p>Government College of Engineering and Leather Technology, Kolkata · DGPA 9.51/10</p></div>
-            </div>
-          </div>
-          <aside class="highlights reveal">
-            <p class="eyebrow">Recognition</p>
-            <ul>
-              <li><strong>2025</strong><span>TCS Research Fellowship, Cycle 19</span></li>
-              <li><strong>2023</strong><span>AIR 4, ISI PhD Computer Science entrance examination</span></li>
-              <li><strong>2021</strong><span>AIR 18, ISI M.Tech CS entrance examination</span></li>
-              <li><strong>2021</strong><span>98.8 percentile, GATE</span></li>
-            </ul>
-          </aside>
-        </div>
-      </section>
-
-      <section id="teaching" class="section teaching-section">
-        <div class="shell teaching-grid">
-          <div>
-            <p class="eyebrow">04 / Teaching Exprience</p>
-            <p class="teaching-note">Supporting rigorous foundations in information theory, coding, and mathematics.</p>
+            <p class="eyebrow">Research Focus</p>
+            <h2>Primary Fields of Work</h2>
           </div>
           <div>
-            <div class="teaching-list">
-              <div><span>2026</span><p><strong>Teaching Assistant</strong><br>Abstract Algebra and Number Theory<br><small>Indian Statistical Institute, Kolkata · Instructor: Dr. Sumanta Ghosh</small></p></div>
-              <div><span>2025</span><p><strong>Teaching Assistant</strong><br>Coding Theory<br><small>Indian Statistical Institute, Kolkata · Instructor: Dr. Sumanta Ghosh</small></p></div>
+            <div class="research-grid" style="margin-top: 0;">
+              <article class="research-card">
+                <p class="card-number">01</p>
+                <h3>Quantum Statistical Inference</h3>
+                <p>Pure-state prediction under relative-entropy loss, Cramér-Rao efficiency of quantum U-statistics, and optimal quantum state estimation.</p>
+              </article>
+              <article class="research-card">
+                <p class="card-number">02</p>
+                <h3>Quantum Differential Privacy</h3>
+                <p>Quantum information ordering, stability-implies-generalization guarantees, and privacy-preserving quantum learning.</p>
+              </article>
+              <article class="research-card">
+                <p class="card-number">03</p>
+                <h3>Quantum Learning Theory</h3>
+                <p>Generalization bounds for quantum learning via Rényi divergences, PAC learning in operator spaces, and sample complexity analysis.</p>
+              </article>
+            </div>
+            <div style="margin-top: 1.5rem;">
+              <a href="research.html" class="button button-primary" style="font-size: 0.9rem; padding: 0.5rem 1rem;">
+                View All Research Fields &amp; Papers Separately →
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="contact" class="contact-section section-dark">
-        <div class="shell contact-grid">
-          <div>
-            <p class="eyebrow light">05 / Get in touch</p>
-            <h2>Interested in a research <em>conversation?</em></h2>
+      <!-- Contact Information on the Homepage (Mandatory User Request) -->
+      <section id="contact" class="contact-section" style="border-top: 1px solid var(--line); background: var(--paper);">
+        <div class="shell">
+          <div class="split-heading" style="margin-bottom: 2.5rem;">
+            <div>
+              <p class="eyebrow">Communication</p>
+              <h2 style="font-size: clamp(1.8rem, 3.5vw, 2.5rem);">Contact Information</h2>
+            </div>
+            <div class="intro-copy">
+              <p>
+                Feel free to reach out for research discussions, preprint pre-circulation, collaborations in quantum information theory, or academic invitations.
+              </p>
+            </div>
           </div>
-          <div class="contact-links">
-            <a href="mailto:ayanavadasgupta_r@isical.ac.in">ayanavadasgupta_r@isical.ac.in <span aria-hidden="true">↗</span></a>
-            <a href="mailto:ayanavadasgupta0@gmail.com">ayanavadasgupta0@gmail.com <span aria-hidden="true">↗</span></a>
-            <a href="https://www.linkedin.com/in/ayanava-dasgupta-25061999/" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+            <!-- Address Card -->
+            <div style="padding: 1.75rem; border: 1px solid var(--line); border-radius: 4px; background: var(--tint);">
+              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--accent-blue);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                <strong style="font-size: 1rem; text-transform: uppercase; letter-spacing: 0.04em;">Academic Affiliation</strong>
+              </div>
+              <address style="font-style: normal; line-height: 1.6; font-size: 0.95rem; color: var(--ink);">
+                <strong>Electronics and Communication Sciences Unit (ECSU)</strong><br>
+                <a href="https://www.isical.ac.in/" target="_blank" rel="noopener noreferrer" style="color: inherit; font-weight: 600;">
+                  Indian Statistical Institute, Kolkata
+                </a><br>
+                203 Barrackpore Trunk Road<br>
+                Kolkata 700108, West Bengal, India
+              </address>
+              <div style="margin-top: 1rem; font-size: 0.85rem; color: var(--muted);">
+                Office: ECSU Department · ISI Kolkata Main Campus
+              </div>
+            </div>
+
+            <!-- Email & Messaging Card -->
+            <div style="padding: 1.75rem; border: 1px solid var(--line); border-radius: 4px; background: var(--tint);">
+              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--accent-blue);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect width="20" height="16" x="2" y="4" rx="2"/>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                </svg>
+                <strong style="font-size: 1rem; text-transform: uppercase; letter-spacing: 0.04em;">Email Addresses</strong>
+              </div>
+
+              <div class="contact-links" style="border-top: none;">
+                <a href="mailto:ayanavadasgupta0@gmail.com" style="padding: 0.6rem 0;" title="Primary Personal / Academic Email">
+                  <div>
+                    <span style="font-size: 0.78rem; color: var(--muted); display: block;">Primary Email</span>
+                    <strong>ayanavadasgupta0@gmail.com</strong>
+                  </div>
+                  <span aria-hidden="true">↗</span>
+                </a>
+                <a href="mailto:ayanavadasgupta_r@isical.ac.in" style="padding: 0.6rem 0;" title="Institutional ISI Email">
+                  <div>
+                    <span style="font-size: 0.78rem; color: var(--muted); display: block;">Institutional Email</span>
+                    <strong>ayanavadasgupta_r@isical.ac.in</strong>
+                  </div>
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Academic & Web Profiles Card -->
+            <div style="padding: 1.75rem; border: 1px solid var(--line); border-radius: 4px; background: var(--tint);">
+              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--accent-blue);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="2" y1="12" x2="22" y2="12"/>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                </svg>
+                <strong style="font-size: 1rem; text-transform: uppercase; letter-spacing: 0.04em;">Online Profiles</strong>
+              </div>
+
+              <div class="contact-links" style="border-top: none;">
+                <a href="https://scholar.google.com/citations?hl=en&user=FrvI78gAAAAJ" target="_blank" rel="noopener noreferrer" style="padding: 0.5rem 0;">
+                  <span>Google Scholar</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+                <a href="https://arxiv.org/search/quant-ph?searchtype=author&query=Dasgupta%2C+A" target="_blank" rel="noopener noreferrer" style="padding: 0.5rem 0;">
+                  <span>arXiv (quant-ph)</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+                <a href="https://www.linkedin.com/in/ayanava-dasgupta-25061999/" target="_blank" rel="noopener noreferrer" style="padding: 0.5rem 0;">
+                  <span>LinkedIn</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+                <a href="https://dblp.org/pid/361/1816.html" target="_blank" rel="noopener noreferrer" style="padding: 0.5rem 0;">
+                  <span>DBLP Computer Science</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer section-dark">
+    <!-- Site Footer -->
+    <footer class="site-footer">
       <div class="shell footer-wrap">
         <span>© <span id="year"></span> Ayanava Dasgupta</span>
-        <span>Quantum Information Researcher · Kolkata, India</span>
+        <span>Indian Statistical Institute, Kolkata</span>
       </div>
     </footer>
+
+    <!-- Mobile Quick Navigation Bar (Floating Dock) -->
+    <nav class="mobile-bottom-bar" aria-label="Mobile Navigation">
+      <a href="index.html" class="mobile-tab active" aria-label="Home">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <span>Home</span>
+      </a>
+      <a href="research.html" class="mobile-tab" aria-label="Research">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+        <span>Research</span>
+      </a>
+      <a href="career.html" class="mobile-tab" aria-label="Career">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        <span>Career</span>
+      </a>
+      <a href="cv.html" class="mobile-tab" aria-label="Curriculum Vitae">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+        <span>CV (PDF)</span>
+      </a>
+      <a href="#contact" class="mobile-tab" aria-label="Contact">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        <span>Contact</span>
+      </a>
+    </nav>
+
     <script src="assets/site.js"></script>
   </body>
 </html>
