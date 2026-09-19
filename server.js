@@ -8,25 +8,30 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const PORT = 3000;
 
-// Serve static files from root directory
-app.use(express.static(__dirname));
-
-// PWA Manifest and Service Worker routes with exact headers
+// PWA Manifest and Service Worker routes with exact headers (before static middleware)
 app.get('/manifest.webmanifest', (req, res) => {
-  res.type('application/manifest+json');
+  res.setHeader('Content-Type', 'application/manifest+json; charset=utf-8');
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
   res.sendFile(path.join(__dirname, 'manifest.webmanifest'));
 });
 
 app.get('/manifest.json', (req, res) => {
-  res.type('application/manifest+json');
+  res.setHeader('Content-Type', 'application/manifest+json; charset=utf-8');
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
   res.sendFile(path.join(__dirname, 'manifest.json'));
 });
 
 app.get('/sw.js', (req, res) => {
-  res.type('application/javascript');
-  res.set('Service-Worker-Allowed', '/');
+  res.setHeader('Content-Type', 'application/javascript; charset=utf-8');
+  res.setHeader('Service-Worker-Allowed', '/');
+  res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
   res.sendFile(path.join(__dirname, 'sw.js'));
 });
+
+// Serve static files from root directory
+app.use(express.static(__dirname));
 
 app.get('/apple-touch-icon.png', (req, res) => {
   res.sendFile(path.join(__dirname, 'assets', 'apple-touch-icon.png'));
