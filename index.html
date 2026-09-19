@@ -13,7 +13,13 @@
     <meta property="og:type" content="website">
     <title>Ayanava Dasgupta | Quantum Information Researcher</title>
     <link rel="icon" href="assets/ad-logo.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="assets/ad-logo.svg">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Ayanava">
     <!-- Immediate Theme Synchronization (matches browser dark/light mode instantly without flash) -->
     <script>
       (function() {
@@ -97,6 +103,10 @@
           >
             Contact
           </a>
+          <button type="button" class="nav-tab-btn pwa-install-btn" style="display: none;" aria-label="Install web app on mobile or desktop">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+            <span>Install App</span>
+          </button>
         </nav>
       </div>
     </header>
@@ -353,8 +363,11 @@
     <!-- Site Footer -->
     <footer class="site-footer">
       <div class="shell footer-wrap">
-        <span>© <span id="year"></span> Ayanava Dasgupta</span>
-        <span>Indian Statistical Institute, Kolkata</span>
+        <span>© <span id="year"></span> Ayanava Dasgupta · Indian Statistical Institute, Kolkata</span>
+        <button type="button" class="pwa-install-btn" style="display: none;" aria-label="Install mobile or desktop app">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+          <span>Install Mobile App</span>
+        </button>
       </div>
     </footer>
 

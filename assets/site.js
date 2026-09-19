@@ -523,6 +523,122 @@
     }
   }
 
+  // --- 8. PROGRESSIVE WEB APP (PWA) INSTALLATION & OFFLINE SUPPORT ---
+  function initPWA() {
+    // 1. Service Worker Registration
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/sw.js').then(function (reg) {
+          // SW registered
+        }).catch(function (err) {
+          // SW registration failed
+        });
+      });
+    }
+
+    // 2. Offline Connectivity Toast
+    const offlineToast = document.createElement('div');
+    offlineToast.className = 'pwa-offline-toast';
+    offlineToast.setAttribute('role', 'status');
+    offlineToast.innerHTML = '<span style="width:8px;height:8px;border-radius:50%;background:#e07a5f;display:inline-block;"></span> Offline Mode — Cached content available';
+    document.body.appendChild(offlineToast);
+
+    function updateOnlineStatus() {
+      if (!navigator.onLine) {
+        offlineToast.classList.add('is-visible');
+      } else {
+        offlineToast.classList.remove('is-visible');
+      }
+    }
+    window.addEventListener('online', updateOnlineStatus);
+    window.addEventListener('offline', updateOnlineStatus);
+    if (!navigator.onLine) updateOnlineStatus();
+
+    // 3. In-App Install Prompt Handling
+    const isStandalone =
+      window.matchMedia('(display-mode: standalone)').matches ||
+      window.navigator.standalone === true;
+
+    // If running inside an installed standalone app, suppress install prompts
+    if (isStandalone) {
+      return;
+    }
+
+    let deferredPrompt = null;
+    const isIOS = /iphone|ipad|ipod/.test(window.navigator.userAgent.toLowerCase());
+    const installBtns = document.querySelectorAll('.pwa-install-btn');
+
+    // Create iOS guide modal
+    const modalBackdrop = document.createElement('div');
+    modalBackdrop.className = 'pwa-modal-backdrop';
+    modalBackdrop.innerHTML = `
+      <div class="pwa-modal" role="dialog" aria-modal="true" aria-labelledby="pwa-modal-title">
+        <h3 id="pwa-modal-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+          Install on iOS
+        </h3>
+        <p>Install this academic website as a standalone mobile app on your iPhone or iPad:</p>
+        <ol>
+          <li>Tap the <strong>Share</strong> button in Safari's bottom toolbar (<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg> icon).</li>
+          <li>Scroll down and tap <strong>Add to Home Screen</strong> (<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg> icon).</li>
+          <li>Tap <strong>Add</strong> at the top right to complete installation.</li>
+        </ol>
+        <button type="button" class="pwa-modal-close-btn">Got it</button>
+      </div>
+    `;
+    document.body.appendChild(modalBackdrop);
+
+    const closeBtn = modalBackdrop.querySelector('.pwa-modal-close-btn');
+    closeBtn.addEventListener('click', () => modalBackdrop.classList.remove('is-open'));
+    modalBackdrop.addEventListener('click', (e) => {
+      if (e.target === modalBackdrop) modalBackdrop.classList.remove('is-open');
+    });
+
+    function showInstallUI() {
+      installBtns.forEach(btn => {
+        btn.style.display = 'inline-flex';
+      });
+    }
+
+    // Android / Chromium / Edge / Desktop PWA install event
+    window.addEventListener('beforeinstallprompt', function (e) {
+      e.preventDefault();
+      deferredPrompt = e;
+      showInstallUI();
+    });
+
+    // Handle clicks on install buttons
+    installBtns.forEach(btn => {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (deferredPrompt) {
+          deferredPrompt.prompt();
+          deferredPrompt.userChoice.then(function (choice) {
+            if (choice.outcome === 'accepted') {
+              installBtns.forEach(b => b.style.display = 'none');
+            }
+            deferredPrompt = null;
+          });
+        } else if (isIOS) {
+          modalBackdrop.classList.add('is-open');
+        } else {
+          // General browser guidance
+          alert('To install this app on your mobile device, tap your browser menu and choose "Install App" or "Add to Home Screen".');
+        }
+      });
+    });
+
+    // If on iOS Safari, show the install option
+    if (isIOS) {
+      showInstallUI();
+    }
+
+    window.addEventListener('appinstalled', function () {
+      installBtns.forEach(btn => btn.style.display = 'none');
+      deferredPrompt = null;
+    });
+  }
+
   // --- DOM READY BOOTSTRAP ---
   document.addEventListener('DOMContentLoaded', function () {
     initThemeSwitch();
@@ -531,5 +647,6 @@
     initCiteCopy();
     initCvViewToggle();
     initMobileNav();
+    initPWA();
   });
 })();
